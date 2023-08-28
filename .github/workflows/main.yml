@@ -6,4 +6,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: ls -la
+      - run: make build
+  tests:
+    runs-on:  ubuntu-latest
+    steps:
+      - run: make tests
+  
