@@ -3,14 +3,20 @@ name: hello-world
 on: push
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
     steps:
       - name: 'Checkout repository'
         uses: actions/checkout@v3
       - name: 'Build project'
         run: echo "Make build project"
   tests:
-    runs-on:  ubuntu-latest
+    runs-on:  ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
     needs:    build
     steps:
       - name: 'Run testst'
