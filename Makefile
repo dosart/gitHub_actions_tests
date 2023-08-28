@@ -1,5 +1,5 @@
 build:
-  echo "Make build project"
+    echo "Make build project"
 
 test:
-  echo "Make tests proect"
+    echo "Make tests proect"
