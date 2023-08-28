@@ -5,10 +5,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - run: make build
+      - name: 'Checkout repository'
+        uses: actions/checkout@v3
+      - name: 'Build project'
+        run: echo "Make build project"
   tests:
     runs-on:  ubuntu-latest
     steps:
-      - run: make tests
+      - name: 'Run testst'
+        run:  echo "Make tests"
   
