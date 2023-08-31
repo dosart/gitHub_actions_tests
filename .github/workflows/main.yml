@@ -23,5 +23,5 @@ jobs:
     needs:    build
     steps:
       - name: 'Run testst'
-        run:  echo "Make tests"
+        run:  make tests
   
